@@ -28,8 +28,7 @@ def notifySlack(text, channel, attachments) {
 ansiColor('xterm') {
    node('rzdockeruat') {
        
-       //sh 'curl -XPOST -u TheUncharted:e816ec547a623e13fa0b8711eca91b4172645c5a https://api.github.com/repos/:organization/:repos/statuses/$(git rev-parse HEAD) -d "{\"state\": \"success\",  \"target_url\": \"${BUILD_URL}\", \"description\": \"The build has succeeded!\"}"'
-       
+             
        
       stage 'Checking out GitHub Repo' 
       
