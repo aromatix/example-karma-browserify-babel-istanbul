@@ -5,7 +5,7 @@ module.exports = (...args) => {
   let sum = 0
 
   args.forEach(item => {
-    sum += item * 2
+    sum += item
   })
 
   return sum
