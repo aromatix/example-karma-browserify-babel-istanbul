@@ -11,7 +11,9 @@ import java.util.Optional
 def notifySlack(text, channel, attachments) {
 
     //your  slack integration url
+
     def slackURL = 'https://hooks.slack.com/services/AAAAA/AAAAAAA' 
+
     //from the jenkins wiki, you can updload an avatar and
     //use that one
     def jenkinsIcon = 'https://wiki.jenkins-ci.org/download/attachments/327683/JENKINS?version=1&modificationDate=1302750804000'
@@ -28,8 +30,7 @@ def notifySlack(text, channel, attachments) {
 ansiColor('xterm') {
    node('rzdockeruat') {
        
-       
-       
+
        
       stage 'Checking out GitHub Repo' 
       
