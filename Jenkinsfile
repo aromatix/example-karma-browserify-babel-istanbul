@@ -38,7 +38,7 @@ ansiColor('xterm') {
       //git url: 'https://github.com/TheUncharted/karma-webpack-example.git'
       git url: 'https://github.com/TheUncharted/example-karma-browserify-babel-istanbul.git'
        
-      def scannerHome = tool 'SonarQube Scanner 2.8'
+      def scannerHome = tool 'SonarQube Scanner 2.9'
       withSonarQubeEnv {
         sh "${scannerHome}/bin/sonar-scanner"
         }
