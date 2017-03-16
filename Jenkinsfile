@@ -38,10 +38,12 @@ ansiColor('xterm') {
       //git url: 'https://github.com/TheUncharted/karma-webpack-example.git'
       git url: 'https://github.com/TheUncharted/example-karma-browserify-babel-istanbul.git'
        
+               stage('Sonar') {
       def scannerHome = tool 'Sonar scanner'
       withSonarQubeEnv {
         sh "${scannerHome}/bin/sonar-scanner"
         }
+               }
    
       def maven = docker.build('karmababel');
       sh 'chmod +x ./entrypoint.sh'
