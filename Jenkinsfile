@@ -39,7 +39,7 @@ ansiColor('xterm') {
       git url: 'https://github.com/TheUncharted/example-karma-browserify-babel-istanbul.git'
        
                stage('Sonar') {
-      def scannerHome = tool 'Sonar scanner 2'
+      def scannerHome = tool 'Sonar scanner'
       withSonarQubeEnv {
         sh "${scannerHome}/bin/sonar-scanner"
         }
