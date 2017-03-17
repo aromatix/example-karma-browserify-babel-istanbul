@@ -44,6 +44,7 @@ ansiColor('xterm') {
         sh "${scannerHome}/bin/sonar-scanner"
         }
                }
+      sh "ls -lR"
    
       def maven = docker.build('karmababel');
       sh 'chmod +x ./entrypoint.sh'
